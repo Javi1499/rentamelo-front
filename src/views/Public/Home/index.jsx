@@ -8,6 +8,7 @@ import { ProductList, Carousel, CategoriesList } from "components";
 
 const url = process.env.REACT_APP_URL_BACK;
 const Home = () => {
+  console.log(url)
   const [change, setChange] = useState(false);
   const [productsData, setProductsData] = useState([]);
   const obtenerInfo = async () => {

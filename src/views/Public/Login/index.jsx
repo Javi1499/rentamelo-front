@@ -9,7 +9,7 @@ const Component = () => {
   const [showAlert, setShowAlert] = useState({ status: false, message: "" });
   const onSubmit = async (data, e) => {
     const res = await axios.post(`${url}/autenticacion/login`, data);
-    console.log(res);
+    console.log(url);
     if (res.data.status === 400) {
       console.log(res.status, res.data.mensaje);
       return setShowAlert({ status: true, message: res.data.mensaje });
